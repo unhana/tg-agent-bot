@@ -3,7 +3,11 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
 
-Telegram bot with ai agents.
+Telegram bot with ai agents.  
+In telegram group, type /image + description to get image.  
+Also, you can @[bot] talk to AI.  
+Image agent model is wanx2.1-t2i-turbo from aliyun.  
+Text AI You can use any model that conforms to the openai specification
 
 # How to run
 

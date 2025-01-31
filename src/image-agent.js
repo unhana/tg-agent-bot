@@ -8,13 +8,13 @@ const generateImage = async (prompt) => {
 };
 
 async function startImage(prompt) {
-  const DASHSCOPE_API_KEY = config.OPEN_AI_KEY; // 从环境变量中读取 API 密钥
+  const IMAGE_AGENT_KEY = config.IMAGE_AGENT_KEY; // 从环境变量中读取 API 密钥
 
   const url =
     "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis";
   const headers = {
     "X-DashScope-Async": "enable",
-    Authorization: `Bearer ${DASHSCOPE_API_KEY}`,
+    Authorization: `Bearer ${IMAGE_AGENT_KEY}`,
     "Content-Type": "application/json",
   };
 
@@ -36,12 +36,12 @@ async function startImage(prompt) {
 }
 
 const checkTaskStatus = (taskId) => {
-  const DASHSCOPE_API_KEY = config.OPEN_AI_KEY;
+  const IMAGE_AGENT_KEY = config.IMAGE_AGENT_KEY;
 
   return new Promise((resolve, reject) => {
     const url = `https://dashscope.aliyuncs.com/api/v1/tasks/${taskId}`;
     const headers = {
-      Authorization: `Bearer ${DASHSCOPE_API_KEY}`,
+      Authorization: `Bearer ${IMAGE_AGENT_KEY}`,
     };
 
     const intervalId = setInterval(async () => {

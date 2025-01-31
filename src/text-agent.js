@@ -8,7 +8,7 @@ const generateText = async (botName, msg) => {
   const realText = text.replace(`@${botName}`, "");
 
   const completion = await openai.chat.completions.create({
-    model: config.TEXT_AGENT_MODEL, // 模型列表：https://help.aliyun.com/zh/model-studio/getting-started/models
+    model: config.TEXT_AGENT_MODEL,
     messages: [
       {
         role: "system",
